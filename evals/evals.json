@@ -1,0 +1,57 @@
+{
+  "skill_name": "briefing-room",
+  "evals": [
+    {
+      "id": "founder-product-notes",
+      "prompt": "Use The Briefing Room on this messy context: I have a product idea for busy parents to coordinate school forms, sports schedules, and family logistics. A few friends said they would pay but nobody has signed up yet. I keep bouncing between making a calendar app, a text-message assistant, or a shared family dashboard. The pain feels real but I don't know if this is a product, a feature, or just me projecting because my own life is chaotic. I have notes from six parent conversations: people hate school portals, forget deadlines, coordinate through texts, and say they already use Google Calendar but it doesn't solve the mental load. I need to make sense of this before I decide what to build.",
+      "baseline_expected_failure": "Without the skill, an agent is likely to summarize the idea, recommend an MVP, or choose a product direction too early. It may blur parent feedback, founder interpretation, and personal projection into one confidence level.",
+      "expected_output": "Produces a structured brief that separates facts from claims and assumptions, preserves the product-shape uncertainty, surfaces tensions between calendar/app/assistant/dashboard, and recommends a next use without prematurely choosing a product direction.",
+      "files": [],
+      "assertions": [
+        "Includes a structured brief with Situation, Objective, Facts or Known Facts, Assumptions, Tensions, Open Questions, and Next Use",
+        "Does not recommend a product direction as settled",
+        "Separates directly provided parent feedback from interpretations",
+        "Identifies the uncertainty about product vs feature vs projection"
+      ]
+    },
+    {
+      "id": "messy-meeting-context",
+      "prompt": "Use The Briefing Room on this meeting dump: Sales says enterprise prospects love the analytics feature but churned SMB users say setup is too hard. Product wants to ship dashboards next because it is already half-built. Support says onboarding docs are the top complaint. The CEO asked whether we should keep pushing upmarket or fix activation first. Marketing has a campaign planned around analytics in three weeks. Nobody agreed on a decision, but Alex took an action item to pull churn data, Priya said she would review onboarding recordings, and Mateo said delaying the campaign would be expensive. I need a brief I can send back to the team.",
+      "baseline_expected_failure": "Without the skill, an agent is likely to turn the dump into generic meeting notes or an executive summary. It may miss the unresolved strategic decision, flatten department perspectives into consensus, or lose named owners and evidence gaps.",
+      "expected_output": "Creates a team-ready brief that captures the strategic question, grouped context, action owners, competing claims, trade-offs, unresolved decision, and whether the situation is ready for decision or needs more evidence.",
+      "files": [],
+      "assertions": [
+        "Names the unresolved decision about upmarket push versus activation fix",
+        "Captures action owners Alex, Priya, and Mateo",
+        "Separates sales/product/support/marketing perspectives",
+        "Includes tensions or trade-offs rather than smoothing them into consensus"
+      ]
+    },
+    {
+      "id": "personal-career-sensemaking",
+      "prompt": "Use The Briefing Room here. I'm trying to make sense of my career situation. I have a stable job and a good reputation, but I feel like my best energy is going into AI experiments outside work. I don't want to blow up my life chasing novelty. At the same time I keep getting signals that people value the stuff I'm making: a few peers ask me for workflows, someone asked if I consult, and I feel more alive building these tools than in status meetings. Financially I cannot be reckless. I also don't know if this is a business, a portfolio, or just a creative season. Can you organize this without telling me what to do?",
+      "baseline_expected_failure": "Without the skill, an agent is likely to become a career coach, recommend quitting/staying/consulting, or over-psychologize the user's situation. It may fail to preserve both the practical constraints and the creative signals.",
+      "expected_output": "Organizes the personal context into a brief without prescribing a life decision, preserving emotional and practical stakes, separating signals from interpretations, and framing open questions and next uses for reflection or pressure-testing.",
+      "files": [],
+      "assertions": [
+        "Does not tell the user to quit, consult, or stay",
+        "Separates practical constraints from emotional/creative signals",
+        "Identifies uncertainty about business vs portfolio vs creative season",
+        "Keeps the output useful for human reflection"
+      ]
+    },
+    {
+      "id": "research-claims-verification-boundary",
+      "prompt": "Use The Briefing Room on this research dump: I am trying to understand whether small companies should let employees use AI tools with customer data. I have notes saying AI improves productivity, one blog claims legal teams are banning all customer data in public tools, a vendor says their enterprise product is compliant, someone on LinkedIn says regulators are about to crack down, and our support team already pasted customer tickets into a chatbot twice. I need to organize this before I write an internal policy recommendation.",
+      "baseline_expected_failure": "Without the skill, an agent is likely to overstate the current regulatory facts, turn vendor claims into evidence, or jump into drafting a policy recommendation before separating facts, claims, risks, and verification needs.",
+      "expected_output": "Creates a structured brief that separates provided incidents from claims and vendor assertions, identifies legal/compliance/current-fact verification needs, preserves the internal policy objective, and recommends expert or source verification before final policy advice.",
+      "files": [],
+      "assertions": [
+        "Does not present regulatory claims as verified current facts",
+        "Separates internal incidents from blog, vendor, and social-media claims",
+        "Identifies customer-data, compliance, legal, and reputational stakes",
+        "Recommends verification or expert review before policy finalization"
+      ]
+    }
+  ]
+}
