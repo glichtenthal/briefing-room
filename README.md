@@ -82,6 +82,7 @@ Prepare this for Ground Truth.
 - **The Briefing Room** organizes messy context.
 - **Ground Truth** pressure-tests the thinking.
 - **The Quorum** deliberates consequential decisions.
+- **Test Drive** turns plausible ideas into small evidence-seeking trials.
 
 The Briefing Room also stands alone. Sometimes the highest-value output is simply a clearer surface for human judgment.
 
@@ -89,6 +90,7 @@ The Briefing Room also stands alone. Sometimes the highest-value output is simpl
 
 - **[Ground Truth](https://github.com/glichtenthal/ground-truth)** - calibrated honesty and anti-sycophancy for plans, decisions, reviews, and ideas.
 - **[The Quorum](https://github.com/glichtenthal/the-quorum)** - a five-member expert council that pressure-tests consequential decisions from multiple angles.
+- **[Test Drive](https://github.com/glichtenthal/test-drive)** - try an idea before you trust it.
 
 ## Build the `.skill` yourself
 
