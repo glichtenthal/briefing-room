@@ -77,6 +77,14 @@ Organize this context so I can think clearly about what matters.
 Prepare this for Ground Truth.
 ```
 
+## Try it in three minutes
+
+Start with the worked quick demo:
+
+- [Quick demo: turn scattered onboarding context into a structured brief](examples/quick-demo.md)
+
+It shows a realistic messy input, a copy-paste prompt, the expected brief shape, and the natural next step into Ground Truth.
+
 ## How it fits with other skills
 
 - **The Briefing Room** organizes messy context.
@@ -111,6 +119,8 @@ briefing-room/
 │   └── social-preview.svg
 ├── evals/
 │   └── evals.json
+├── examples/
+│   └── quick-demo.md
 ├── README.md
 ├── CHANGELOG.md
 └── LICENSE

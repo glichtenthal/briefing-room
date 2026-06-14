@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.1 - 2026-06-13
+
+- Added a quick-demo example with realistic messy context, copy-paste prompt, representative output shape, and next-step guidance.
+- Updated README adoption path so new users can try the skill in three minutes.
+
 ## v0.1.1 - 2026-06-09
 
 - Tightened frontmatter description to focus on triggering conditions.
