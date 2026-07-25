@@ -37,7 +37,7 @@ Download `briefing-room.skill` from the [latest release](../../releases), then a
 Ask Codex:
 
 ```text
-Install my Briefing Room skill from https://github.com/glichtenthal/briefing-room
+Install my Briefing Room skill from https://github.com/glichtenthal/briefing-room into ~/.agents/skills
 ```
 
 Or install manually:
@@ -46,8 +46,16 @@ Or install manually:
 python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py \
   --repo glichtenthal/briefing-room \
   --path . \
-  --name briefing-room
+  --name briefing-room \
+  --dest ~/.agents/skills
 ```
+
+Codex 0.95.0 and newer loads user skills from `~/.agents/skills`. For Codex
+0.94.x and older, install the complete folder at `~/.codex/skills/briefing-room`
+instead.
+
+Do not install the skill in both locations. Duplicate-name skills can fail
+silently when invoked by bare name.
 
 Restart Codex after installation.
 
@@ -56,7 +64,7 @@ Restart Codex after installation.
 The repository is the skill. Copy the complete folder into your agent's skills directory. For example, Codex discovers:
 
 ```text
-~/.codex/skills/briefing-room/SKILL.md
+~/.agents/skills/briefing-room/SKILL.md
 ```
 
 ## Good first uses

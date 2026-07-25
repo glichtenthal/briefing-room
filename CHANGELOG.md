@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.2 - 2026-07-25
+
+- Updates install instructions for the current user-skill location, with a compatibility note for older Codex versions.
+
 ## v1.1 - 2026-06-13
 
 - Added a quick-demo example with realistic messy context, copy-paste prompt, representative output shape, and next-step guidance.
