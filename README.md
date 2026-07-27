@@ -37,7 +37,7 @@ Download `briefing-room.skill` from the [latest release](../../releases), then a
 Ask Codex:
 
 ```text
-Install my Briefing Room skill from https://github.com/glichtenthal/briefing-room into ~/.agents/skills
+Install The Briefing Room v1.2 into ~/.agents/skills
 ```
 
 Or install manually:
@@ -46,8 +46,16 @@ Or install manually:
 python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py \
   --repo glichtenthal/briefing-room \
   --path . \
+  --ref v1.2 \
+  --method download \
   --name briefing-room \
   --dest ~/.agents/skills
+```
+
+Already installed? The installer will not overwrite an existing copy. Move it first:
+
+```bash
+mv ~/.agents/skills/briefing-room ~/.agents/briefing-room-backup-$(date +%Y%m%d-%H%M%S)
 ```
 
 Codex 0.95.0 and newer loads user skills from `~/.agents/skills`. For Codex
