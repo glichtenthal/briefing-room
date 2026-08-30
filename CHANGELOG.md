@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.2.1 - 2026-08-30
+
+- Replaces the incomplete self-packaging example with a reproducible skill-creator workflow.
+
 ## v1.2 - 2026-07-25
 
 - Updates install instructions for the current user-skill location, with a compatibility note for older Codex versions.

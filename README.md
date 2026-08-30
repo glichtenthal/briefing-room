@@ -37,7 +37,7 @@ Download `briefing-room.skill` from the [latest release](../../releases), then a
 Ask Codex:
 
 ```text
-Install The Briefing Room v1.2 into ~/.agents/skills
+Install The Briefing Room v1.2.1 into ~/.agents/skills
 ```
 
 Or install manually:
@@ -46,7 +46,7 @@ Or install manually:
 python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py \
   --repo glichtenthal/briefing-room \
   --path . \
-  --ref v1.2 \
+  --ref v1.2.1 \
   --method download \
   --name briefing-room \
   --dest ~/.agents/skills
@@ -118,10 +118,18 @@ The Briefing Room also stands alone. Sometimes the highest-value output is simpl
 
 ## Build the `.skill` yourself
 
-The repo is the skill. Package it into an installable file with the skill creator tooling:
+The repo is the skill. Package it with Anthropic's [skill-creator](https://github.com/anthropics/skills) tooling:
 
 ```bash
-python -m scripts.package_skill path/to/briefing-room
+git clone --depth 1 https://github.com/anthropics/skills.git anthropic-skills
+cd anthropic-skills/skills/skill-creator
+python3 -m venv .venv
+. .venv/bin/activate
+python -m pip install PyYAML
+stage_dir=$(mktemp -d)
+mkdir "$stage_dir/briefing-room"
+rsync -a --exclude '.git' /absolute/path/to/briefing-room/ "$stage_dir/briefing-room/"
+python -m scripts.package_skill "$stage_dir/briefing-room" /absolute/path/to/output
 ```
 
 ## Repo layout
